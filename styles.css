@@ -1,0 +1,26 @@
+/* Navigation bar styles */
+.nav-class {
+    background-color: LightCyan; 
+    font-weight: bold;
+    
+}
+.nav-class{
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+}
+.nav-class::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background-color: #272727;
+    transition: 0.3s;
+    transition-timing-function: easy-in-out;
+    transform: scaleX(0)
+}
+.nav-class:hover::after
+{
+    transform: scaleX(1)}
