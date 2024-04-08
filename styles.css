@@ -12,7 +12,10 @@ color: Plum;
     display: block; /* Make the image a block element */
     margin: 0 auto; /* Center the block-level image horizontally */
 }
-
+p {
+            background-color: DarkMagenta; /* Set the background color */
+            padding: 10px; /* Add padding for better visibility */
+        }
 
 .hero-section-class{ 
 color: RebeccaPurple;
