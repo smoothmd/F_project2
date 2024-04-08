@@ -4,6 +4,16 @@
 .origin-section-class{ 
 color: Plum;
 }
+.image-container {
+    text-align: center; /* Center the image horizontally */
+}
+
+.image-container img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the block-level image horizontally */
+}
+
+
 .hero-section-class{ 
 color: RebeccaPurple;
 }
