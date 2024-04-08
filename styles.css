@@ -68,7 +68,7 @@ border-color: #333 ;
     height: 1px;
     width: 100%;
     left: 0;
-    background-color: #272727;
+    background-color: #0000FF;
     transition: 0.3s;
     transition-timing-function: easy-in-out;
     transform: scaleX(0)
