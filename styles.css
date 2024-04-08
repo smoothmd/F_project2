@@ -13,8 +13,10 @@ color: Plum;
     margin: 0 auto; /* Center the block-level image horizontally */
 }
 p {
+            
             background-color: #333; /* Set the background color */
-            padding: 10px; /* Add padding for better visibility */
+            padding: 10px; /* Add padding for better visibility */ 
+            color: SlateBlue;
         }
 
 .hero-section-class{ 
