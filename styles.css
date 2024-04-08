@@ -14,9 +14,9 @@ color: Plum;
 }
 p {
             
+            color: SlateBlue;
             background-color: #333; /* Set the background color */
             padding: 10px; /* Add padding for better visibility */ 
-            color: SlateBlue;
         }
 
 .hero-section-class{ 
