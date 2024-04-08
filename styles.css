@@ -53,8 +53,9 @@ border-color: #333 ;
 
 /* Navigation bar styles */
 .nav-class { 
-    font-weight: bold;
     background-color:CadetBlue;
+    font-weight: bold;
+    
 }
 .nav-class{
     width: max-content;
