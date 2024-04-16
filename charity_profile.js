@@ -7,7 +7,7 @@ document.getElementById("volunteerBtn").addEventListener("click", function() {
 // Create another element to enhance interactivity
 const additionalInfo = document.createElement("p");
 additionalInfo.textContent = "Hover over this text to see additional charity details.";
-additionalInfo.addEventListener("mouseover", function() {
+document.getElementById("volunteerBtn").addEventListener("click", function() {
     // Prompt for user contact information
     const name = prompt("Please enter your name:");
     const email = prompt("Please enter your email:");
