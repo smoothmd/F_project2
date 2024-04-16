@@ -8,7 +8,19 @@ document.getElementById("volunteerBtn").addEventListener("click", function() {
 const additionalInfo = document.createElement("p");
 additionalInfo.textContent = "Hover over this text to see additional charity details.";
 additionalInfo.addEventListener("mouseover", function() {
-    // Display additional charity details when the user hovers over this element
-    // You can update the page with real-time data here
+    <form>
+       <label for="fname">Name:</label><br>
+       <input type="text" id="fname" name="fname"><br>
+       <h3></h3>
+       <label for="lname">Email:</label><br>
+       <input type="text" id="lname" name="lname"> 
+       <h3></h3>
+       <label for="fname">Subject:</label><br>
+       <input type="text" id="fname" name="fname"><br>
+       <h3></h3>
+       <label for="fname">Message:</label><br>
+       <input type="text" id="fname" name="fname"><br>
+       <input type="submit" value="Submit">
+    </form>
 });
 document.body.appendChild(additionalInfo);
