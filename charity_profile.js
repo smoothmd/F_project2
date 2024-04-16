@@ -8,19 +8,21 @@ document.getElementById("volunteerBtn").addEventListener("click", function() {
 const additionalInfo = document.createElement("p");
 additionalInfo.textContent = "Hover over this text to see additional charity details.";
 additionalInfo.addEventListener("mouseover", function() {
-    <form>
-       <label for="fname">Name:</label><br>
-       <input type="text" id="fname" name="fname"><br>
-       <h3></h3>
-       <label for="lname">Email:</label><br>
-       <input type="text" id="lname" name="lname"> 
-       <h3></h3>
-       <label for="fname">Subject:</label><br>
-       <input type="text" id="fname" name="fname"><br>
-       <h3></h3>
-       <label for="fname">Message:</label><br>
-       <input type="text" id="fname" name="fname"><br>
-       <input type="submit" value="Submit">
-    </form>
+    // Prompt for user contact information
+    const name = prompt("Please enter your name:");
+    const email = prompt("Please enter your email:");
+    const phone = prompt("Please enter your phone number:");
+
+    // Validate the input (you can add more sophisticated validation)
+    if (name && email && phone) {
+        // Do something with the contact information (e.g., send it to a server)
+        console.log("Contact information submitted:");
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Phone:", phone);
+    } else {
+        // Handle the case where the user cancels or provides incomplete information
+        console.log("Contact information not provided.");
+    }
 });
 document.body.appendChild(additionalInfo);
