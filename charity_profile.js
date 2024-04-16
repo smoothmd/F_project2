@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const additionalInfoElement = document.getElementById('additional-info');
 
     additionalInfoElement.addEventListener('mouseover', function() {
-        additionalInfoElement.innerHTML = 
-        displayAdditionalInfo();
+        additionalInfoElement.innerHTML
+        displayAdditionalInfo('work in progress....');
     });
 });
 
 function displayAdditionalInfo() {
     // Here you can dynamically update the page with real-time data or display additional details
-    alert('Displaying additional charity details...');
+    alert('work in progress....');
 }
 
 
