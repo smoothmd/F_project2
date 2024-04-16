@@ -9,7 +9,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const volunteerButton = document.getElementById('volunteer-button');
 
-    volunteerButton.addEventListener('click', function() {
+    volunteer-button.addEventListener('click', function() {
         // Prompt for user contact information
     const name = prompt("Please enter your name:");
     const email = prompt("Please enter your email:");
