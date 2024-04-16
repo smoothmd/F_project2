@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // For instance, you could display additional charity details when a user hovers over certain elements, or update the page with real-time data.
     const additionalInfoElement = document.getElementById('additional-info');
 
-    additionalInfoElement.addEventListener('mouseover', function() {
+    additionalInfoElement.addEventListener('click', function() {
         additionalInfoElement.innerHTML
         displayAdditionalInfo('work in progress....');
     });
