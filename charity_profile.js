@@ -1,13 +1,6 @@
 
 // Add event listener to the "Volunteer Now" button
 document.getElementById("volunteerBtn").addEventListener("click", function() {
-    // Prompt a form for users to input their contact information
-    // You can create the form dynamically using JavaScript or toggle its visibility
-}); 
-// Create another element to enhance interactivity
-const additionalInfo = document.createElement("p");
-additionalInfo.textContent = "Hover over this text to see additional charity details.";
-document.getElementById("volunteerBtn").addEventListener("click", function() {
     // Prompt for user contact information
     const name = prompt("Please enter your name:");
     const email = prompt("Please enter your email:");
@@ -24,5 +17,11 @@ document.getElementById("volunteerBtn").addEventListener("click", function() {
         // Handle the case where the user cancels or provides incomplete information
         console.log("Contact information not provided.");
     }
-});
+}); 
+// Create another element to enhance interactivity
+const additionalInfo = document.createElement("p");
+additionalInfo.textContent = "Hover over this text to see additional charity details.";
+document.getElementById("volunteerBtn").addEventListener("click", function() {
+
+}); 
 document.body.appendChild(additionalInfo);
