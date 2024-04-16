@@ -10,7 +10,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const volunteerButton = document.getElementById('volunteer-button');
 
     volunteerButton.addEventListener('click', function() {
-        // Display a form for users to input their contact information
+        // Prompt for user contact information
+    const name = prompt("Please enter your name:");
+    const email = prompt("Please enter your email:");
+    const phone = prompt("Please enter your phone number:");
+
+    // Validate the input (you can add more sophisticated validation)
+    if (name && email && phone) {
+        // Do something with the contact information (e.g., send it to a server)
+        console.log("Contact information submitted:");
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Phone:", phone);
+    } else {
+        // Handle the case where the user cancels or provides incomplete information
+        console.log("Contact information not provided.");
+    }
         displayVolunteerForm();
     });
 });
