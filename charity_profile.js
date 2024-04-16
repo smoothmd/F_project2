@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const additionalInfoElement = document.getElementById('additional-info');
 
     additionalInfoElement.addEventListener('mouseover', function() {
-        additionalInfoElement.innerHTML = "<p>work in process right now</p>";
+        additionalInfoElement.innerHTML = <p>"This is additional information about our charity.</p>";
         displayAdditionalInfo();
     });
 });
