@@ -9,7 +9,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const volunteerButton = document.getElementById('volunteer-button');
 
-    volunteer-button.addEventListener('click', function() {
+    
+});
+
+function displayVolunteerForm() {
+   volunteerButton.addEventListener('click', function() {
         // Prompt for user contact information
     const name = prompt("Please enter your name:");
     const email = prompt("Please enter your email:");
@@ -28,11 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
         displayVolunteerForm();
     });
-});
-
-function displayVolunteerForm() {
-    // Here you can dynamically create the form using JavaScript
-    // or show/hide a pre-existing form in your HTML
     alert('Displaying volunteer form...');
 }
 
