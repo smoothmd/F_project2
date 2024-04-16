@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const additionalInfoElement = document.getElementById('additional-info');
 
     additionalInfoElement.addEventListener('mouseover', function() {
-        // Display additional charity details when hovered over
+        additionalInfoElement.innerHTML = "<p>this will be saved</p>";
         displayAdditionalInfo();
     });
 });
