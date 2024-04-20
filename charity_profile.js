@@ -40,7 +40,7 @@ function displayAdditionalInfo() {
 function fetchDataFromGoogleMapsAPI() {
     // Construct the URL for the API request
     const apiKey = 'AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg'; // Replace 'YOUR_API_KEY' with your actual API key
-    const apiUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.100444,79.083278&radius=RADIUS&type=TYPE&key=${apiKey}`;
+    const apiUrl = `http://maps.google.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CATYPE&key=${apiKey}`;
 
     // Make the HTTP GET request using fetch
     fetch(apiUrl)
