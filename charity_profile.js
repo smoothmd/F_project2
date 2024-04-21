@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const locations = [
-    { lat: 38.6270, lng: -90.1994, name: "Christian Friends of New Americans", info: "Supporting immigrant and refugee integration." },
-    { lat: 38.6297, lng: -90.1989, name: "YMCA Literacy Programs", info: "Helping improve literacy among children and teens." },
+    { lat: 37.4223244, lng: -122.0843505, name: Location one", info: "test site" },
+    
     // Add more locations as needed
 ];
 
