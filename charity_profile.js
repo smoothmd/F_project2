@@ -41,7 +41,7 @@ const locations = [
 function initMap() {
     const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,  // Adjust the zoom level to encompass all markers
-        center: { lat: 38.6270, lng: -90.1994 }  // Center of the map
+        center: { lat: 37.4223244, lng: -122.0843505 }  // Center of the map
     });
 
     locations.forEach(location => {
