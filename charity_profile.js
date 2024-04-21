@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const volunteerButton = document.getElementById('volunteer-button');
+
     // Step 4: Add event listener to the "Volunteer Now" button
     volunteerButton.addEventListener('click', function() {
         // Step 5: Prompt for user contact information
@@ -18,19 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Contact information not provided.");
         }
     });
+
     // Step 6: Using the DOM, create another element of your choice to enhance the interactivity and dynamism of your Charity Profile Page.
     // For instance, you could display additional charity details when a user hovers over certain elements, or update the page with real-time data.
     const additionalInfoElement = document.getElementById('additional-info');
     additionalInfoElement.addEventListener('click', function() {
-        additionalInfoElement.innerHTML
-        displayAdditionalInfo('work in progress....');
+        displayAdditionalInfo();
     });
-});
-function displayAdditionalInfo() {
-    // Here you can dynamically update the page with real-time data or display additional details
-    alert('work in progress....');
-}
- // Initialize Google Maps with multiple charity locations
+
+    // Initialize Google Maps with multiple charity locations
     initMap();
 });
 
@@ -71,7 +68,10 @@ window.addEventListener('error', function(e) {
         document.getElementById('map').innerHTML = 'Failed to load the map. Please try again later.';
     }
 });
+
+// Function to display additional information
 function displayAdditionalInfo() {
     // Here you can dynamically update the page with real-time data or display additional details
     alert('work in progress....');
 }
+
