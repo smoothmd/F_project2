@@ -40,7 +40,7 @@ function displayAdditionalInfo() {
 function fetchDataFromGoogleMapsAPI() {
     // Construct the URL for the API request
     const apiKey = 'AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg'; // Replace 'YOUR_API_KEY' with your actual API key
-    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway+Mountain+View+CA`;
+    const apiUrl = `https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400&key={apiKey}&signature=YOUR_SIGNATURE`;
     document.getElementById('work-yes')
     // Make the HTTP GET request using fetch
     fetch(apiUrl)
