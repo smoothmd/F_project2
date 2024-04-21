@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const volunteerButton = document.getElementById('volunteer-button');
-
     // Step 4: Add event listener to the "Volunteer Now" button
     volunteerButton.addEventListener('click', function() {
         // Step 5: Prompt for user contact information
         const name = prompt("Please enter your name:");
         const email = prompt("Please enter your email:");
         const phone = prompt("Please enter your phone number:");
-
         // Validate the input (you can add more sophisticated validation)
         if (name && email && phone) {
             // Do something with the contact information (e.g., send it to a server)
@@ -20,63 +18,51 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Contact information not provided.");
         }
     });
-
     // Step 6: Using the DOM, create another element of your choice to enhance the interactivity and dynamism of your Charity Profile Page.
     // For instance, you could display additional charity details when a user hovers over certain elements, or update the page with real-time data.
     const additionalInfoElement = document.getElementById('additional-info');
-
     additionalInfoElement.addEventListener('click', function() {
         additionalInfoElement.innerHTML
         displayAdditionalInfo('work in progress....');
     });
 });
-
 function displayAdditionalInfo() {
     // Here you can dynamically update the page with real-time data or display additional details
     alert('work in progress....');
 }
+// Define a function to make the HTTP GET request
+function fetchDataFromGoogleMapsAPI() {
+    // Construct the URL for the API request
 
-   // Initialize Google Maps with multiple charity locations
-    initMap();
-});
-
-const locations = [
-    { lat: 37.4223244, lng: -122.0843505, name: "example", info: "add details" },
-    // Add more locations as needed
-];
-
-// Function to initialize Google Maps and add markers
-function initMap() {
-    const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,  // Adjust the zoom level to encompass all markers
-        center: { lat: 38.6270, lng: -90.1994 }  // Center of the map
-    });
-
-    locations.forEach(location => {
-        const marker = new google.maps.Marker({
-            position: { lat: location.lat, lng: location.lng },
-            map: map,
-            title: location.name
+    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg`.getElementById('map-map');
+    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg`;
+    // Make the HTTP GET request using fetch
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Once the data is fetched, display it on the website
+            displayLocationData(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
         });
-
-        const infoWindow = new google.maps.InfoWindow({
-            content: `<h3>${location.name}</h3><p>${location.info}</p>`
-        });
-
-        marker.addListener('click', () => {
-            infoWindow.open(map, marker);
-        });
-    });
 }
-
-// Error handling for Google Maps script loading failure
-window.addEventListener('error', function(e) {
-    if (e.target.tagName === 'SCRIPT' && e.target.src.includes('googleapis')) {
-        console.error('Failed to load Google Maps script!');
-        document.getElementById('map').innerHTML = 'Failed to load the map. Please try again later.';
-    }
-});
-
+function displayLocationData(data) {
+    const locationDataElement = document.getElementById('location-data');
+    // Manipulate the DOM to display the fetched data
+    locationDataElement.innerHTML = `
+        <h2>Location Data</h2>
+        <p>Address: ${data.results[0].formatted_address}</p>
+        <p>Latitude: ${data.results[0].geometry.location.lat}</p>
+        <p>Longitude: ${data.results[0].geometry.location.lng}</p>
+    `;
+}
+// Call the function to fetch data when the page loads
+fetchDataFromGoogleMapsAPI();
+function displayAdditionalInfo() {
+    // Here you can dynamically update the page with real-time data or display additional details
+    alert('work in progress....');
+}
 function displayAdditionalInfo() {
     // Here you can dynamically update the page with real-time data or display additional details
     alert('work in progress....');
