@@ -40,7 +40,7 @@ function displayAdditionalInfo() {
 function fetchDataFromGoogleMapsAPI() {
     // Construct the URL for the API request
     
-    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg`.getElementById('map-map');
+    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg`;
     // Make the HTTP GET request using fetch
     fetch(apiUrl)
         .then(response => response.json())
