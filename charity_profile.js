@@ -39,7 +39,7 @@ function displayAdditionalInfo() {
 // Define a function to make the HTTP GET request
 function fetchDataFromGoogleMapsAPI() {
     // Construct the URL for the API request
-    const apiKey = 'AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg'; // Replace 'YOUR_API_KEY' with your actual API key
+    
     const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCzvMCLb5M-r6rR2AZkrUO6Tt-5Qj_NNDg`.getElementById('map-map');
     // Make the HTTP GET request using fetch
     fetch(apiUrl)
@@ -53,20 +53,19 @@ function fetchDataFromGoogleMapsAPI() {
         });
 }
 
-// Define a function to display the location data on the website
 function displayLocationData(data) {
-    // Process the data and integrate it into the website's layout
-    // This could involve creating HTML elements dynamically or updating existing elements
-    // For example:
-    const locationList = document.getElementById('location-list');
-    data.results.forEach(result => {
-        const listItem = document.createElement('li');
-        listItem.textContent = result.name;
-        locationList.appendChild(listItem);
-    });
+    const locationDataElement = document.getElementById('location-data');
+
+    // Manipulate the DOM to display the fetched data
+    locationDataElement.innerHTML = `
+        <h2>Location Data</h2>
+        <p>Address: ${data.results[0].formatted_address}</p>
+        <p>Latitude: ${data.results[0].geometry.location.lat}</p>
+        <p>Longitude: ${data.results[0].geometry.location.lng}</p>
+    `;
 }
 
-// Call the function to fetch data from the Google Maps API
+// Call the function to fetch data when the page loads
 fetchDataFromGoogleMapsAPI();
 
 
