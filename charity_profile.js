@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const locations = [
-    { lat: 37.4223244, lng: -122.0843505, name: Location one", info: "test site" },
+    { lat: 37.4223244, lng: -122.0843505, name: "Location one", info: "test site" },
     
     // Add more locations as needed
 ];
